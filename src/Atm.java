@@ -54,7 +54,8 @@ public class Atm {
                         System.out.println("sorry insufficient balance  ");
                         return;
                     }
-                   balance=Math.abs(amount-balance-DebitCharge);
+                    balance=Math.abs(amount-balance);
+                    balance-=DebitCharge;
                     if(balance<500){
                         System.out.println("your account reached limited amount please maintain balance above 500");
                     }
